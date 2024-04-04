@@ -1,0 +1,24 @@
+.navbar {
+    background-color: #cdf7c7;
+    padding: 10px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 50;
+}
+
+.navbar-menu-item {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-link {
+    color: rgb(238, 175, 175);
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
