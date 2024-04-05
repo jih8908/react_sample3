@@ -7,6 +7,7 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './pages/Login'
 import Join from './pages/Join'
+import Write from './pages/Write'; 
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<Profile></Profile>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/join" element={<Join></Join>}></Route>
+          <Route path="/write" element={<Write />}></Route>
         </Routes>
       </Router>
     </div>

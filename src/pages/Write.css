@@ -1,0 +1,42 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.input-group-container {
+    margin-bottom: 20px;
+    
+}
+
+.input-group-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group-container input[type="text"],
+.input-group-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group-container textarea {
+    height: 200px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #129524;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.submit-button:hover {
+    background-color: #00b31e;
+}
