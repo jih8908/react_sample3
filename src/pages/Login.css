@@ -1,42 +1,43 @@
-.body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Poor+Story&display=swap');
+
+.gaegu-regular {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
   
-  .login-container {
+  .container {
     max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    background-color: #f4faf3;
+    margin: 200px auto;
+    padding: 50px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .login-container h2 {
+  .container h2 {
     text-align: center;
     margin-bottom: 20px;
   }
   
-  .login-container .input-group {
+  .container .input-group {
     margin-bottom: 20px;
   }
   
-  .login-container label {
+  .container label {
     display: block;
     margin-bottom: 5px;
   }
   
-  .login-container input[type='text'],
-  .login-container input[type='password'] {
+  .container input[type='text'],
+  .container input[type='password'] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
   }
   
-  .login-container button {
+  .container button {
     width: 100%;
     padding: 10px;
     background-color: #129524;
@@ -44,8 +45,9 @@
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 20px;
   }
   
-  .login-container button:hover {
+  .container button:hover {
     background-color: #00b31e;
   }

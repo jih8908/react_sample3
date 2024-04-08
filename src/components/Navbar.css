@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Poor+Story&display=swap');
+
+.poor-story-regular {
+    font-family: "Poor Story", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
 .navbar {
-    background-color: #cdf7c7;
+    background-color: #f7f7f7;
     padding: 10px;
 }
 
@@ -7,11 +16,13 @@
     list-style-type: none;
     margin: 0;
     padding: 50;
+    
 }
 
 .navbar-menu-item {
     display: inline;
     margin-right: 20px;
+    
 }
 
 .navbar-link {
@@ -20,5 +31,5 @@
 }
 
 .navbar-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }

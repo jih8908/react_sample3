@@ -20,7 +20,7 @@ function Write() {
     };
 
     return (
-        <div className="container">
+        <div className="container gaegu-regular">
             <form onSubmit={handleSubmit}>
                 <div className="input-group-container">
                     <label htmlFor="title">제목:</label>

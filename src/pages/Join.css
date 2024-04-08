@@ -1,45 +1,55 @@
-.signup-container {
-    max-width: 400px;
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&display=swap');
+
+.gaegu-regular {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.container {
+    /* max-width: 400px; */
+    width: 200px;
     margin: 100px auto;
     padding: 20px;
-    background-color: #f6faf3;
+    background-color: #f7f7f7;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .signup-container h2 {
+  .h2 {
     text-align: center;
     margin-bottom: 20px;
   }
   
-  .signup-container .input-group {
+  .input-group {
     margin-bottom: 20px;
   }
   
-  .signup-container label {
+  .label {
     display: block;
     margin-bottom: 5px;
   }
   
-  .signup-container input[type='text'],
-  .signup-container input[type='email'],
-  .signup-container input[type='password'] {
+  .input-group{
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 3px;
   }
   
-  .signup-container button {
+  button {
     width: 100%;
     padding: 10px;
-    background-color: #129524;
+    background-color: #4bab58;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
   }
   
-  .signup-container button:hover {
-    background-color: #00b31e;
+  button:hover {
+    background-color: #32ce4a;
   }
+
+  

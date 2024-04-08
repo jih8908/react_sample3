@@ -10,12 +10,22 @@ function Login() {
   var [result, setResult] = useState("");
 
   const fnLogin = async () => {
-    console.log(userId);
     try {
       const response = await fetch(`http://localhost:4000/login?userId=${userId}&pwd=${pwd}`);
       const jsonData = await response.json();
-      // setResult(jsonData.result);
-      console.log(jsonData.result);
+      if (jsonData.result === "success") {
+        
+        alert("로그인 성공!");
+        await sessionStorage.setItem("userId", userId);
+        window.location.href = `/profile?userId=${userId}`;//세션 가져감
+        console.log(userId);
+        
+      } else {
+        
+        alert("로그인 실패!");
+        alert("로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.");
+      }
+      //console.log(jsonData.result);
     } catch (error) {
       console.error("에러!");
     }
@@ -30,7 +40,7 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className='gaegu-regular container'>
       <div>
         아이디 : <input type='text' placeholder='아이디입력하셈' onChange={fnIdCheck} value={userId}></input>
       </div>
