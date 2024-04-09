@@ -1,22 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Write.css';
 
 function Write() {
     // 제목과 내용을 상태로 관리합니다.
     const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
+    const [contents, setContents] = useState('');
 
-    // 글쓰기 버튼을 눌렀을 때 실행되는 함수입니다.
-    const handleSubmit = (event) => {
+    const [userId, setUserId] = useState('');
+
+    useEffect(() => {
+        setUserId(sessionStorage.getItem('userId'));
+        console.log("이거 나와야 함==>", userId);
+    }, [userId]);
+
+    const handleSubmit = async (event) => {
         event.preventDefault(); // 기본 동작 방지
 
-        // 입력된 제목과 내용을 콘솔에 출력합니다.
-        console.log('제목:', title);
-        console.log('내용:', content);
-
-        // 입력값 초기화
         setTitle('');
-        setContent('');
+        setContents('');
+
+        try {
+            const response = await fetch(`http://localhost:4000/write?userId=${userId}&title=${title}&contents=${contents}`, {
+                method: 'GET',
+            });
+            // 서버로부터의 응답 처리
+            const data = await response.json();
+            console.log('글쓰기 응답 ==>', data);
+            if (data.success) {
+                if (window.confirm('글이 성공적으로 작성되었습니다. 홈으로 이동하시겠습니까?')) {
+                    
+                    window.location.href = "/";
+                }
+            } else {
+                console.error('글쓰기 요청 실패 ==>', data.error);
+            }
+        } catch (error) {
+            console.error('글쓰기 요청 실패:', error);
+        }
     };
 
     return (
@@ -33,11 +53,11 @@ function Write() {
                     />
                 </div>
                 <div className="input-group-container">
-                    <label htmlFor="content">내용:</label>
+                    <label htmlFor="contents">내용:</label>
                     <textarea
-                        id="content"
-                        value={content}
-                        onChange={(e) => setContent(e.target.value)}
+                        id="contents"
+                        value={contents}
+                        onChange={(e) => setContents(e.target.value)}
                         required
                     />
                 </div>

@@ -185,6 +185,8 @@ app.get('/login', function (req, res) {
     });
 });
 
+
+
 app.listen(4000);
 
 //cors : 보안정책을 풀기위한 npm (npm i cors)

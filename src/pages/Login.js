@@ -16,7 +16,7 @@ function Login() {
       if (jsonData.result === "success") {
         
         alert("로그인 성공!");
-        await sessionStorage.setItem("userId", userId);
+        sessionStorage.setItem("userId", userId);
         window.location.href = `/profile?userId=${userId}`;//세션 가져감
         console.log(userId);       
       } else {
