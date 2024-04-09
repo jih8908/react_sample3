@@ -24,11 +24,10 @@ function Write() {
                 method: 'GET',
             });
             // 서버로부터의 응답 처리
-            const data = await response.json();
+            const data = await response.json();//data로 가져옴
             console.log('글쓰기 응답 ==>', data);
-            if (data.success) {
-                if (window.confirm('글이 성공적으로 작성되었습니다. 홈으로 이동하시겠습니까?')) {
-                    
+            if (data.result == '성공') {
+                if (window.confirm('글이 성공적으로 작성되었습니다. 홈으로 이동하시겠습니까?')) {                   
                     window.location.href = "/";
                 }
             } else {

@@ -169,7 +169,7 @@ app.get('/signup', function (req, res) {
 
 app.get('/login', function (req, res) {
     var map = req.query;
-    console.log(map);
+    //console.log(map);
     connection.query(`SELECT * FROM TBL_USER WHERE userId = ? AND pwd = ?`, [map.userId, map.pwd], function (error, results, fields) {
         if (error || results.length === 0) {
             res.send({ result: "fail" });
@@ -185,7 +185,31 @@ app.get('/login', function (req, res) {
     });
 });
 
+//글작성
+app.get('/write', function (req, res) {
+    var map = req.query;
+    // console.log(map);
+    connection.query(`INSERT INTO TBL_BOARD (TITLE, CONTENTS, USERID, CDATETIME) VALUES ('${map.title}', '${map.contents}', '${map.userId}', CURRENT_TIMESTAMP);`, function (error, results, fields) {
+        if (error) { res.send({ result : "실패"})}
+        else {
+            // req.session.userId = map.USERID;
+            res.send({ result : "성공"});
+        }
+    });
+});
 
+//게시글 불러오기
+app.get('/profile', function (req, res) {
+    var map = req.query;
+    console.log(map);
+    connection.query(`SELECT * FROM TBL_SNS_USER WHERE userId = ?`, [map.userId], function (error, results, fields) {
+        if (error) { res.send({ result : "실패"})}
+        else {
+            req.session.userId = map.USERID;
+            res.send({ result : "성공"});
+        }
+    });
+});
 
 app.listen(4000);
 

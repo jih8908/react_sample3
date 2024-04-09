@@ -47,8 +47,8 @@ function Join() {
       // 서버 응답을 확인하여 회원가입 성공 또는 실패를 처리
       if (response.ok) {
         alert('회원가입 성공!');
-        if (location.pathname !== '/') {
-          window.location.href = '/'; // 현재 페이지가 홈이 아니라면 홈으로 이동
+        if (location.pathname !== '/login') {
+          window.location.href = '/login'; // 현재 페이지가 홈이 아니라면 홈으로 이동
         }
       } else {
         alert('회원가입 실패!');

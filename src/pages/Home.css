@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Poor+Story&display=swap');
-
-.gaegu-regular {
-  font-family: "Gaegu", sans-serif;
+.orbit-regular {
+  font-family: "Orbit", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+#custom-image {
+  width: 200px;
+  height: 150px;
+}
 
 .containerBox {
   /* max-width: 1000px; */
@@ -18,12 +21,8 @@
   font-size: 20px;
 }
 
-.containerBox2{
-  
-}
 .home-image {
   /* text-align: center; */
   border-radius: 50%;
   width: 100%;
 }
-

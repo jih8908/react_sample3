@@ -18,7 +18,7 @@ function Login() {
         alert("로그인 성공!");
         sessionStorage.setItem("userId", userId);
         window.location.href = `/profile?userId=${userId}`;//세션 가져감
-        console.log(userId);       
+        //console.log(userId);       
       } else {
         alert("로그인 실패!");
         alert("로그인에 실패했습니다. 아이디와 비밀번호를 확인해주세요.");
