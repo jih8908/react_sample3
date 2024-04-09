@@ -27,23 +27,12 @@ function Profile() {
     //     }
     // };
 
-    const onSubmit = async () => {
-        const response = await fetch(`http://localhost:4000/login?userId=${userId}&userPwd=${userPwd}`);
-        const jsonData = await response.json();
-        if (jsonData.result == "success") {
-            sessionStorage.setItem('userId', userId);// sessionStrorage에 저장
-            sessionStorage.setItem('userName', userName);
-        } else {
-            alert("로그인 실패!");
-        }
-    };
-
 
 
     async function fetchUserInfo() {
         try {
             let userId = sessionStorage.getItem("userId"); // getItem 인자로 키 값 넣기
-            const response = await fetch(`http://localhost:4000/login?userId=${userId}`);
+            const response = await fetch(`http://localhost:4000/profile?userId=${userId}`);
             const jsonData = await response.json();
             setUserInfo(jsonData);
         } catch (error) {
