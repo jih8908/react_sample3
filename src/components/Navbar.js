@@ -18,7 +18,7 @@ function Navbar() {
         navbarContent = (
             <>
                 <li className="navbar-menu-item"><Link to="#" onClick={handleLogout}>로그아웃</Link></li>
-                <li className="navbar-menu-item"><Link to="/profile">마이페이지</Link></li>
+                <li className="navbar-menu-item"><Link to="/profile">마이프로필</Link></li>
             </>
         );
     } else {

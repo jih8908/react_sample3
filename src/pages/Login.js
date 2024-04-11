@@ -13,8 +13,7 @@ function Login() {
     try {
       const response = await fetch(`http://localhost:4000/login?userId=${userId}&pwd=${pwd}`);
       const jsonData = await response.json();
-      if (jsonData.result === "success") {
-        
+      if (jsonData.result === "success") {       
         alert("로그인 성공!");
         sessionStorage.setItem("userId", userId);
         window.location.href = `/profile?userId=${userId}`;//세션 가져감

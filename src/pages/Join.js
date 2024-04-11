@@ -71,6 +71,7 @@ function Join() {
       try {
         const response = await fetch(`http://localhost:4000/idCheck.dox?userId=${userId}`);
         const jsonData = await response.json();
+
         setResult(jsonData.result);
         console.log(jsonData.result);
       } catch (error) {
@@ -88,7 +89,7 @@ function Join() {
 
 
   return (
-    <div className='container gaegu-regular'>     
+    <div className='container orbit-regular'>     
         {/* <div>{cnt}</div>
       <button onClick={fnAddCnt}>증가!</button> */}
         <h2>회원가입</h2>

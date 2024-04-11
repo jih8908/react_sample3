@@ -2,9 +2,9 @@
 
 #container {
     /* margin: 80px; */
-    padding: 80px;
+    padding: 100px;
     width: 100%;
-    height: 100%;
+    height: 900px;
     background-color: #f7f7f7;
 }
 
@@ -27,13 +27,11 @@
     object-fit: cover;
 }
 
-
-
 .sidebar {
-    background-color: #fef1fb;
+    /* background-color: #fafffa; */
     float: left;
     width: 20%;
-    padding: 20px;
+    padding: 50px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -59,11 +57,10 @@
 }
 
 .user-settings a:hover {
-    color: #007bff;
+    color: #cc6666;
 }
 
 .profile-name {
-    margin: 0;
     padding-bottom: 20px;
     margin-top: 10px;
     font-size: 24px;
@@ -120,12 +117,23 @@
 .col-md-4,
 .col-lg-3 {
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .user-settings2 {
     font-size: 20px;
 }
+
+.row a {
+    text-decoration: none;
+    color: #e19999;
+}
+
+.row a:hover {
+    color: #cc6666;
+}
+
+
 
 .custom-image {
     width: 200px;
