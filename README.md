@@ -1,3 +1,4 @@
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Hello,%20World!&fontSize=90" />
 💙react home
 ![리액트홈화면](https://github.com/jih8908/react_sample3/assets/153142476/ea9216f2-4f63-4daf-8f3c-d46706fd0cd7)
 🧡react myPage
